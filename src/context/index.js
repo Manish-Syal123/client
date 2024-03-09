@@ -7,8 +7,23 @@ const GlobalState = ({ children }) => {
     title: "",
     description: "",
   });
+  const [blogList, setBlogList] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [isEdit, setIsEdit] = useState(false);
+
   return (
-    <GlobalContext.Provider value={{ formData, setFormdata }}>
+    <GlobalContext.Provider
+      value={{
+        formData,
+        setFormdata,
+        blogList,
+        setBlogList,
+        loading,
+        setLoading,
+        isEdit,
+        setIsEdit,
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );
