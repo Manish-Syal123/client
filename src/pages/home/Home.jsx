@@ -52,7 +52,7 @@ const Home = () => {
   }, []);
 
   if (loading) {
-    return <h2>Loading Blog-Posts! Please wait........</h2>;
+    return <h2>Loading Blog-Posts! Please wait for a moment.....</h2>;
   }
   return (
     <div className="wrapper">
